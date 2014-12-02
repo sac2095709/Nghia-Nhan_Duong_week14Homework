@@ -1,0 +1,46 @@
+package shape;
+import java.text.DecimalFormat;
+
+
+// This is the main class to see the out put run this file
+// TODO: Auto-generated Javadoc
+/**
+ * The Class ShapeDrawn.
+ */
+public class ShapeDrawn {
+
+
+	/**
+	 * The main method.
+	 *
+	 * @param args the arguments
+	 */
+	public static void main(String[] args) {
+
+		DecimalFormat decimalFormat = new DecimalFormat("0.00");
+
+		Shape [] shapeArray = new Shape[6];
+
+		shapeArray[0] = new Circle(10);
+		shapeArray[1] = new Square(5);
+		shapeArray[2] = new Triangle(10, 5);
+		shapeArray[3] = new Sphere(5);
+		shapeArray[4] = new Cube(4);
+		shapeArray[5]  = new Tetrahedron(10);
+
+		Shape shape;
+		for(int i =0; i<shapeArray.length; i++) {
+			shape = shapeArray[i];
+			if(shape instanceof TwoDimensionalShape) {        // check if the shape instance of two TwoDimensionalShape then calculate area
+				TwoDimensionalShape twoDimensionalShape = (TwoDimensionalShape) shape;
+				System.out.println(shape.getClass()+" Area : "+  decimalFormat.format(twoDimensionalShape.getArea()));
+			} else { // check if the shape instance of two ThreeDimensionalShape then calculate area and volume 
+				ThreeDimensionalShape threeDimensionalShape = (ThreeDimensionalShape) shape;
+				System.out.println(shape.getClass()+" Area : "+  decimalFormat.format(threeDimensionalShape.getArea()));
+				System.out.println(shape.getClass()+" Volume : "+  decimalFormat.format(threeDimensionalShape.getVolume()));
+			}
+		}
+
+
+	}
+}
