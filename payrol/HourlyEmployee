@@ -1,0 +1,63 @@
+package payrol;
+
+public class HourlyEmployee extends Employee implements Payable {
+
+
+	private double wage;   // wage per hour
+	private double hours;  // hours worked for week
+
+	// constructor
+	public HourlyEmployee( String first, String last, 
+			String socialSecurityNumber, double hourlyWage, double hoursWorked )
+	{
+		super( first, last, socialSecurityNumber );
+		setWage( hourlyWage );
+		setHours( hoursWorked );
+	} 
+
+	// set hourly employee's wage
+	public void setWage( double wageAmount )
+	{
+		wage = wageAmount < 0.0 ? 0.0 : wageAmount;
+	} 
+	public void setHours( double hoursWorked ) {
+		if ((hoursWorked >= 0.0) && (hoursWorked <= 168.0))
+			hours = hoursWorked;
+		else
+			throw new IllegalArgumentException("Hours worked must be >= 0.0 and <= 168.0");
+	} 
+
+	// return wage
+	public double getWage()
+	{
+		return wage;
+	} 
+
+	// return hours worked
+	public double getHours()
+	{
+		return hours;
+	} 
+
+	// calculate hourly employee's pay;                  
+	// override abstract method earnings in Employee     
+	public double getPaymentAmount()                             
+	{                                                    
+		if ( hours <= 40 )  // no overtime                
+			return wage * hours;                           
+		else                                              
+			return 40 * wage + ( hours - 40 ) * wage * 1.5;
+	}                                                    
+
+	// return String representation of HourlyEmployee object
+	public String toString()                                
+	{                                                       
+		 return String.format( "hourly employee: %s\n%s: $%,.2f; %s: %,.2f",
+				super.toString(), "hourly wage", getWage(),
+				"hours worked", getHours() ); 
+	}
+
+	                                                    
+
+
+}
