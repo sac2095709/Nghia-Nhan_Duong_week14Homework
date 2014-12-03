@@ -1,0 +1,42 @@
+package shape;
+
+// TODO: Auto-generated Javadoc
+/**
+ * The Class Sphere.
+ */
+public class Sphere extends ThreeDimensionalShape {
+
+	/** The area. */
+	double area;
+	
+	/** The volume. */
+	double volume;
+
+	/**
+	 * Instantiates a new sphere.
+	 *
+	 * @param radius the radius
+	 */
+	public Sphere(double radius) {
+		area =  4*Math.pow(radius, 2);
+		volume = (4/3)* (Math.PI)*(Math.pow(radius, 3));
+	}
+
+
+	/* (non-Javadoc)
+	 * @see ThreeDimensionalShape#getArea()
+	 */
+	@Override
+	public double getArea() {
+		return area;
+	}
+
+	/* (non-Javadoc)
+	 * @see ThreeDimensionalShape#getVolume()
+	 */
+	@Override
+	public double getVolume() {
+		return volume;
+	}
+
+}
