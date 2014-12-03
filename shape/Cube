@@ -1,0 +1,43 @@
+package shape;
+
+// TODO: Auto-generated Javadoc
+/**
+ * The Class Cube.
+ */
+public class Cube extends ThreeDimensionalShape {
+
+	
+	/** The area. */
+	double area;
+	
+	/** The volume. */
+	double volume;
+	
+	/**
+	 * Instantiates a new cube.
+	 *
+	 * @param edge the edge
+	 */
+	public Cube(double edge) {
+		
+		area = 6*(Math.pow(edge, 2));
+		volume = Math.pow(edge, 3);
+	}
+	
+	/* (non-Javadoc)
+	 * @see ThreeDimensionalShape#getArea()
+	 */
+	@Override
+	public double getArea() {
+		return area;
+	}
+
+	/* (non-Javadoc)
+	 * @see ThreeDimensionalShape#getVolume()
+	 */
+	@Override
+	public double getVolume() {
+		return volume;
+	}
+
+}
