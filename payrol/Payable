@@ -1,0 +1,16 @@
+package payrol;
+
+// TODO: Auto-generated Javadoc
+/**
+ * The Interface Payable.
+ */
+public interface Payable {
+
+	/**
+	 * Gets the payment amount.
+	 *
+	 * @return the payment amount
+	 */
+	double getPaymentAmount(); // calculate payment; no implementation
+
+}
