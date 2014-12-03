@@ -1,0 +1,30 @@
+package shape;
+
+// TODO: Auto-generated Javadoc
+/**
+ * The Class Square.
+ */
+public class Square extends TwoDimensionalShape {
+
+	/** The area. */
+	double area;
+
+	/**
+	 * Instantiates a new square.
+	 *
+	 * @param side the side
+	 */
+	public Square(double side) {
+		area = Math.pow(side, 2);
+	}
+
+
+	/* (non-Javadoc)
+	 * @see TwoDimensionalShape#getArea()
+	 */
+	@Override
+	public double getArea() {
+		return area;
+	}
+
+}
