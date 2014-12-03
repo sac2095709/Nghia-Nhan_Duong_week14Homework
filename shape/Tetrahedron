@@ -1,0 +1,43 @@
+package shape;
+
+// TODO: Auto-generated Javadoc
+/**
+ * The Class Tetrahedron.
+ */
+public class Tetrahedron extends ThreeDimensionalShape {
+
+
+	/** The area. */
+	double area;
+	
+	/** The volume. */
+	double volume;
+
+	/**
+	 * Instantiates a new tetrahedron.
+	 *
+	 * @param edge the edge
+	 */
+	public Tetrahedron(double edge) {
+
+		volume = Math.pow(edge, 3)/ (6)/Math.sqrt(2);
+		area = Math.cbrt(3)*Math.pow(edge, 2);
+	}
+
+	/* (non-Javadoc)
+	 * @see ThreeDimensionalShape#getArea()
+	 */
+	@Override
+	public double getArea() {
+		return area;
+	}
+
+	/* (non-Javadoc)
+	 * @see ThreeDimensionalShape#getVolume()
+	 */
+	@Override
+	public double getVolume() {
+		return volume;
+	}
+
+}
