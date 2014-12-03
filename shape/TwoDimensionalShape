@@ -1,0 +1,15 @@
+package shape;
+
+// TODO: Auto-generated Javadoc
+/**
+ * The Class TwoDimensionalShape.
+ */
+public abstract class TwoDimensionalShape implements Shape{
+
+	
+	/* (non-Javadoc)
+	 * @see Shape#getArea()
+	 */
+	public abstract double getArea();
+	
+}
