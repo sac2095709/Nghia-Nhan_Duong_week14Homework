@@ -1,0 +1,22 @@
+package shape;
+
+// TODO: Auto-generated Javadoc
+/**
+ * The Class ThreeDimensionalShape.
+ */
+public abstract class ThreeDimensionalShape implements Shape {
+
+	
+	
+	/* (non-Javadoc)
+	 * @see Shape#getArea()
+	 */
+	public abstract double getArea();
+	
+	/**
+	 * Gets the volume.
+	 *
+	 * @return the volume
+	 */
+	public abstract double getVolume();
+}
