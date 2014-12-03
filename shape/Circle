@@ -1,0 +1,33 @@
+package shape;
+
+// TODO: Auto-generated Javadoc
+/**
+ * The Class Circle.
+ */
+public class Circle extends TwoDimensionalShape {
+
+	
+	/** The area. */
+	double area; 
+	
+	/**
+	 * Instantiates a new circle.
+	 *
+	 * @param radius the radius
+	 */
+	public Circle(double radius) {
+		 area = 2*Math.PI * radius;
+	}
+	
+	
+	/* (non-Javadoc)
+	 * @see TwoDimensionalShape#getArea()
+	 */
+	@Override
+	public double getArea() {
+		return area;
+	}
+
+	
+
+}
