@@ -1,0 +1,32 @@
+package shape;
+
+// TODO: Auto-generated Javadoc
+/**
+ * The Class Triangle.
+ */
+public class Triangle extends TwoDimensionalShape {
+
+	
+	/** The area. */
+	double area;
+	
+	/**
+	 * Instantiates a new triangle.
+	 *
+	 * @param base the base
+	 * @param height the height
+	 */
+	public Triangle(double base, double height) {
+		
+		area = (0.5)*(base)*(height);
+	}
+	
+	/* (non-Javadoc)
+	 * @see TwoDimensionalShape#getArea()
+	 */
+	@Override
+	public double getArea() {
+		return area;
+	}
+
+}
