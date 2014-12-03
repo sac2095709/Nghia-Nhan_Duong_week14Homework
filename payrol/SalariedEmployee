@@ -1,0 +1,43 @@
+package payrol;
+
+public class SalariedEmployee extends Employee implements Payable{
+
+
+	private double weeklySalary;
+
+	/// constructor
+	public SalariedEmployee( String first, String last, 
+			String socialSecurityNumber, double salary )
+	{
+		super( first, last, socialSecurityNumber ); 
+		setWeeklySalary( salary );
+	} 
+
+	// set salaried employee's salary
+	public void setWeeklySalary( double salary )
+	{
+		weeklySalary = salary < 0.0 ? 0.0 : salary;
+	} 
+
+	// return salaried employee's salary
+	public double getWeeklySalary()
+	{
+		return weeklySalary;
+	} 
+	// calculate salaried employee's pay;
+	// override abstract method earnings in Employee
+	public double getPaymentAmount()                        
+	{                                               
+		return getWeeklySalary();                    
+	}                                               
+
+	// return String representation of SalariedEmployee object
+	public String toString()
+	{
+		 return String.format("salaried employee: %s\n%s: $%,.2f",
+				super.toString(), "weekly salary", getWeeklySalary() );
+	}
+
+
+
+} // end class SalariedEmployee
